@@ -5,7 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", path: "/" },
+  { label: "About", path: "#" },
   { label: "Services", path: "/services" },
+  { label: "Projects", path: "#" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -26,26 +28,16 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? "shadow-sm border-b border-border" : ""
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
         <Link to="/" className="flex items-center gap-2">
-          <span
-            className={`text-2xl font-black tracking-tight transition-colors ${
-              scrolled ? "text-primary" : "text-primary-foreground"
-            }`}
-          >
+          <span className="text-2xl font-black tracking-tight text-primary">
             BTN
           </span>
-          <span
-            className={`hidden sm:inline text-sm font-medium tracking-wide uppercase transition-colors ${
-              scrolled ? "text-muted-foreground" : "text-primary-foreground/70"
-            }`}
-          >
+          <span className="hidden sm:inline text-sm font-medium tracking-wide uppercase text-muted-foreground">
             Hospitality
           </span>
         </Link>
@@ -54,18 +46,18 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
-              key={item.path}
+              key={item.label}
               to={item.path}
-              className={`text-sm font-semibold tracking-wide uppercase transition-colors hover:text-accent ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
-              } ${location.pathname === item.path ? "text-accent" : ""}`}
+              className={`text-sm font-semibold tracking-wide uppercase transition-colors hover:text-accent text-foreground ${
+                location.pathname === item.path && item.path !== "#" ? "text-accent" : ""
+              }`}
             >
               {item.label}
             </Link>
           ))}
           <Link
             to="/contact"
-            className="ml-2 px-6 py-2.5 text-sm font-bold uppercase tracking-wide rounded bg-accent text-accent-foreground hover:bg-gold-light transition-colors"
+            className="ml-2 px-6 py-2.5 text-sm font-bold uppercase tracking-wide rounded bg-accent text-accent-foreground hover:opacity-90 transition-opacity"
           >
             Engage BTN
           </Link>
@@ -78,9 +70,9 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {mobileOpen ? (
-            <X className={scrolled ? "text-foreground" : "text-primary-foreground"} size={24} />
+            <X className="text-foreground" size={24} />
           ) : (
-            <Menu className={scrolled ? "text-foreground" : "text-primary-foreground"} size={24} />
+            <Menu className="text-foreground" size={24} />
           )}
         </button>
       </div>
@@ -92,14 +84,14 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden gradient-navy overflow-hidden"
+            className="md:hidden bg-white border-b border-border overflow-hidden"
           >
             <nav className="flex flex-col items-center gap-6 py-8">
               {navItems.map((item) => (
                 <Link
-                  key={item.path}
+                  key={item.label}
                   to={item.path}
-                  className="text-primary-foreground text-lg font-semibold uppercase tracking-wide hover:text-accent transition-colors"
+                  className="text-foreground text-lg font-semibold uppercase tracking-wide hover:text-accent transition-colors"
                 >
                   {item.label}
                 </Link>
