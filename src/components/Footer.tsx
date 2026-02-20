@@ -1,36 +1,118 @@
 import { Link } from "react-router-dom";
+import { Mail } from "lucide-react";
+import BtnLogo from "@/components/BtnLogo";
+
+const navLinks = [
+  { label: "Home", path: "/" },
+  { label: "What We Do", path: "/what-we-do" },
+  { label: "Projects", path: "/projects" },
+  { label: "Our Process", path: "/our-process" },
+  { label: "Ecosystem", path: "/ecosystem" },
+  { label: "About BTN", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", path: "/privacy" },
+  { label: "Terms of Use", path: "/terms" },
+  { label: "Disclaimer", path: "/disclaimer" },
+];
 
 const Footer = () => (
   <footer className="gradient-navy text-primary-foreground">
-    <div className="container mx-auto px-6 py-16">
-      <div className="grid md:grid-cols-3 gap-12">
-        <div>
-          <h3 className="text-2xl font-black tracking-tight mb-4">BTN</h3>
-          <p className="text-primary-foreground/70 text-sm leading-relaxed max-w-xs">
-            Boutique hospitality consultancy unlocking maximum value from underutilised land and assets through integrated strategy and disciplined execution.
+    <div className="container mx-auto px-6 pt-16 pb-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        {/* Col 1 – Brand */}
+        <div className="lg:col-span-1">
+          {/* White-tinted logo on dark background */}
+          <div className="mb-5 brightness-0 invert opacity-90">
+            <BtnLogo height={36} />
+          </div>
+          <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
+            Proforma-driven hotel development advisory for Metro Vancouver and the Lower Mainland.
           </p>
+          <a
+            href="mailto:info@BTNpro.ca"
+            className="inline-flex items-center gap-2 mt-4 text-sm text-accent hover:text-accent/80 transition-colors"
+          >
+            <Mail size={14} />
+            info@BTNpro.ca
+          </a>
         </div>
+
+        {/* Col 2 – Navigate */}
         <div>
-          <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-accent">Navigate</h4>
+          <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Navigate</h4>
           <nav className="flex flex-col gap-3">
-            <Link to="/" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</Link>
-            <Link to="/services" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Services</Link>
-            <Link to="/contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</Link>
+            {navLinks.map((l) => (
+              <Link
+                key={l.label}
+                to={l.path}
+                className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
           </nav>
         </div>
+
+        {/* Col 3 – Contact */}
         <div>
-          <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-accent">Contact</h4>
-          <div className="flex flex-col gap-3 text-sm text-primary-foreground/70">
-            <span>(778) 688-6089</span>
-            <span>73 East 6th Avenue, Vancouver V5T 1J3</span>
-            <a href="https://www.BTNpro.ca" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+          <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Contact</h4>
+          <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
+            <a href="tel:7786886089" className="hover:text-primary-foreground transition-colors">
+              (778) 688-6089
+            </a>
+            <span>73 East 6th Avenue<br />Vancouver, BC V5T 1J3</span>
+            <a
+              href="https://www.BTNpro.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-foreground transition-colors"
+            >
               www.BTNpro.ca
             </a>
           </div>
         </div>
+
+        {/* Col 4 – Legal */}
+        <div>
+          <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Legal</h4>
+          <nav className="flex flex-col gap-3">
+            {legalLinks.map((l) => (
+              <Link
+                key={l.label}
+                to={l.path}
+                className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
-      <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center text-xs text-primary-foreground/40">
-        © {new Date().getFullYear()} BTN Hospitality Consultancy. All rights reserved.
+
+      {/* Disclaimer */}
+      <div className="border-t border-primary-foreground/10 pt-8 mb-6">
+        <p className="text-xs text-primary-foreground/35 leading-relaxed max-w-3xl">
+          Examples and outcomes are illustrative; results vary by asset, market conditions, timing, approvals feasibility, and execution scope.
+        </p>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/35">
+        <span>BTN Copyright © 2026 All Rights Reserved.</span>
+        <div className="flex gap-6">
+          {legalLinks.map((l) => (
+            <Link
+              key={l.label}
+              to={l.path}
+              className="hover:text-primary-foreground/60 transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   </footer>
