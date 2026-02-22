@@ -11,6 +11,7 @@ const navItems = [
   { label: "Our Process", path: "/our-process" },
   { label: "Ecosystem", path: "/ecosystem" },
   { label: "About BTN", path: "/about" },
+  { label: "Resources", path: "/resources" },
   { label: "Contact", path: "/contact" },
 ];
 
