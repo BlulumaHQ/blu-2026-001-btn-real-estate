@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import BtnLogo from "@/components/BtnLogo";
 
-const navLinks = [
+const navLinksCol1 = [
   { label: "Home", path: "/" },
   { label: "What We Do", path: "/what-we-do" },
   { label: "Projects", path: "/projects" },
   { label: "Our Process", path: "/our-process" },
+];
+
+const navLinksCol2 = [
   { label: "Ecosystem", path: "/ecosystem" },
   { label: "About BTN", path: "/about" },
+  { label: "Resources", path: "/resources" },
   { label: "Contact", path: "/contact" },
 ];
 
-const legalLinks = [
-  { label: "Privacy Policy", path: "/privacy" },
-  { label: "Terms of Use", path: "/terms" },
-  { label: "Disclaimer", path: "/disclaimer" },
-];
+const allNavLinks = [...navLinksCol1, ...navLinksCol2];
 
 const Footer = () => (
   <footer className="gradient-navy text-primary-foreground">
@@ -24,7 +24,6 @@ const Footer = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         {/* Col 1 – Brand */}
         <div className="lg:col-span-1">
-          {/* White-tinted logo on dark background */}
           <div className="mb-5 brightness-0 invert opacity-90">
             <BtnLogo height={36} />
           </div>
@@ -40,11 +39,11 @@ const Footer = () => (
           </a>
         </div>
 
-        {/* Col 2 – Navigate */}
+        {/* Col 2 – Navigate (first half) */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Navigate</h4>
           <nav className="flex flex-col gap-3">
-            {navLinks.map((l) => (
+            {navLinksCol1.map((l) => (
               <Link
                 key={l.label}
                 to={l.path}
@@ -56,7 +55,23 @@ const Footer = () => (
           </nav>
         </div>
 
-        {/* Col 3 – Contact */}
+        {/* Col 3 – Navigate (second half) */}
+        <div>
+          <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">&nbsp;</h4>
+          <nav className="flex flex-col gap-3">
+            {navLinksCol2.map((l) => (
+              <Link
+                key={l.label}
+                to={l.path}
+                className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Col 4 – Contact */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Contact</h4>
           <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
@@ -74,22 +89,6 @@ const Footer = () => (
             </a>
           </div>
         </div>
-
-        {/* Col 4 – Legal */}
-        <div>
-          <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Legal</h4>
-          <nav className="flex flex-col gap-3">
-            {legalLinks.map((l) => (
-              <Link
-                key={l.label}
-                to={l.path}
-                className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
       </div>
 
       {/* Disclaimer */}
@@ -103,11 +102,11 @@ const Footer = () => (
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/35">
         <span>BTN Copyright © 2026 All Rights Reserved.</span>
         <div className="flex gap-6">
-          {legalLinks.map((l) => (
+          {allNavLinks.map((l) => (
             <Link
               key={l.label}
               to={l.path}
-              className="hover:text-primary-foreground/60 transition-colors"
+              className="hover:text-primary-foreground/60 transition-colors hidden sm:inline"
             >
               {l.label}
             </Link>
