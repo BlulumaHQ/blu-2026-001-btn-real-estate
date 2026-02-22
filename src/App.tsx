@@ -15,7 +15,6 @@ import OurProcess from "./pages/OurProcess";
 import Ecosystem from "./pages/Ecosystem";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,7 +47,6 @@ const AppInner = () => {
           <Route path="/ecosystem" element={<Ecosystem />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/resources" element={<Resources />} />
           {/* Legacy redirects */}
           <Route path="/services" element={<WhatWeDo />} />
           {/* Legal placeholder pages */}
