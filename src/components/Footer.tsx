@@ -25,9 +25,9 @@ const legalLinks = [
 const Footer = () => (
   <footer className="gradient-navy text-primary-foreground">
     <div className="container mx-auto px-6 pt-16 pb-8">
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 mb-12">
         {/* Col 1 – Brand */}
-        <div className="col-span-2 md:col-span-2 lg:col-span-1">
+        <div className="col-span-2 lg:col-span-1">
           <div className="mb-5 brightness-0 invert opacity-90">
             <BtnLogo height={36} />
           </div>
@@ -43,7 +43,10 @@ const Footer = () => (
           </a>
         </div>
 
-        {/* Col 2 – Navigate (first half) */}
+        {/* Col 2 – Spacer (hidden on mobile) */}
+        <div className="hidden lg:block" />
+
+        {/* Col 3 – Navigate A */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Navigate</h4>
           <nav className="flex flex-col gap-3">
@@ -59,7 +62,7 @@ const Footer = () => (
           </nav>
         </div>
 
-        {/* Col 3 – Navigate (second half) */}
+        {/* Col 4 – Navigate B */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">&nbsp;</h4>
           <nav className="flex flex-col gap-3">
@@ -75,7 +78,7 @@ const Footer = () => (
           </nav>
         </div>
 
-        {/* Col 4 – Contact */}
+        {/* Col 5 – Contact */}
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-5 text-accent">Contact</h4>
           <div className="flex flex-col gap-3 text-sm text-primary-foreground/60">
