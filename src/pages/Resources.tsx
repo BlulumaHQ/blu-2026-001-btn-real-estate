@@ -35,16 +35,16 @@ const resources = [
 const Resources = () => (
   <>
     {/* Hero */}
-    <section className="pt-36 pb-20 bg-surface">
+    <section className="gradient-navy pt-36 pb-24">
       <div className="container mx-auto px-6">
         <AnimatedSection className="max-w-3xl">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">
-            Knowledge Base
+            Resources
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-[1.08] mb-6">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
             Development Resources
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-white/65 text-lg leading-relaxed">
             Key policy documents and urban planning guidelines for Vancouver.
           </p>
         </AnimatedSection>
