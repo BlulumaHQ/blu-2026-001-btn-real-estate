@@ -1,4 +1,4 @@
-import btnLogoSrc from "@/assets/btn-logo.svg";
+import btnLogoSrc from "@/assets/btn-logo-main.svg";
 
 interface Props {
   className?: string;
