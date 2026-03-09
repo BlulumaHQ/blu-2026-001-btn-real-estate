@@ -4,19 +4,19 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const values = [
   {
-    title: "Proforma discipline above all",
+    title: "Proforma Discipline Above All",
     desc: "Every recommendation is stress-tested against the numbers. We do not advance concepts that cannot survive underwriting scrutiny.",
   },
   {
-    title: "Integration, not hand-offs",
+    title: "Integration, Not Hand-Offs",
     desc: "Strategy, entitlements, brand, design, and delivery are treated as one continuous process—not sequential phases managed by disconnected advisors.",
   },
   {
-    title: "Local expertise, institutional standard",
+    title: "Local Expertise, Institutional Standard",
     desc: "Our work is grounded in Metro Vancouver realities—municipal processes, stakeholder dynamics, construction cost pressures—delivered to the standard of institutional advisory.",
   },
   {
-    title: "Alignment with owner objectives",
+    title: "Alignment With Owner Objectives",
     desc: "We are engaged to create value for landowners and real estate owners. Every engagement is structured around the owner's specific objectives—whether that is maximum exit value, fastest path to revenue, or long-term asset performance.",
   },
 ];
@@ -29,7 +29,7 @@ const About = () => (
         <AnimatedSection className="max-w-3xl">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">About BTN</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Hospitality development advisory, built differently.
+            Hospitality Development Advisory, Built Differently.
           </h1>
           <p className="text-white/65 text-lg leading-relaxed">
             BTN is a boutique hospitality real estate consultancy focused on Metro Vancouver and the Lower Mainland. We work with landowners and real estate owners to unlock hospitality-led value from underutilised sites—through a proforma-first, integrated advisory model that bridges strategy, entitlements, brand, and execution.
@@ -45,7 +45,7 @@ const About = () => (
           <AnimatedSection>
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Who We Are</p>
             <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight">
-              A specialised team with deep hospitality and development expertise.
+              A Specialised Team With Deep Hospitality and Development Expertise.
             </h2>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
@@ -80,7 +80,7 @@ const About = () => (
               </div>
             </div>
             <div className="bg-primary/5 rounded-xl p-6 border border-border">
-              <p className="text-sm font-bold text-foreground mb-2">Our focus area</p>
+              <p className="text-sm font-bold text-foreground mb-2">Our Focus Area</p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Metro Vancouver, the Lower Mainland, and select BC markets where BTN has active relationships and local expertise.
               </p>
@@ -96,7 +96,7 @@ const About = () => (
         <AnimatedSection className="max-w-3xl mb-16">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Why BTN Was Built</p>
           <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight">
-            Bridging the advisory-to-delivery gap.
+            Bridging the Advisory-to-Delivery Gap.
           </h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
@@ -131,7 +131,7 @@ const About = () => (
       <div className="container mx-auto px-6 text-center">
         <AnimatedSection>
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-            Get in touch with the BTN team.
+            Get in Touch With the BTN Team.
           </h2>
           <Link
             to="/contact"
