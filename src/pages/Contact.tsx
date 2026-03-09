@@ -83,7 +83,7 @@ const Contact = () => {
           <AnimatedSection className="max-w-3xl">
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Contact</p>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-              Get in touch to discuss your land asset.
+              Get in Touch to Discuss Your Land Asset.
             </h1>
             <p className="text-white/65 text-lg max-w-2xl leading-relaxed">
               Share your property details and objectives. BTN will outline a proforma-grounded pathway to unlock value, align brand strategy, and execute with the right team.

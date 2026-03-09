@@ -40,7 +40,7 @@ const Ecosystem = () => (
         <AnimatedSection className="max-w-3xl">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Ecosystem</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            A network built for hospitality development in Metro Vancouver.
+            A Network Built for Hospitality Development in Metro Vancouver.
           </h1>
           <p className="text-white/65 text-lg leading-relaxed">
             BTN's value extends beyond direct advisory services. Through a carefully developed ecosystem of local partners—architects, consultants, contractors, municipal advisors, and brand relationships—BTN helps owners assemble and coordinate the right team for each project.
@@ -56,7 +56,7 @@ const Ecosystem = () => (
           <AnimatedSection>
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-4">Why the Ecosystem Matters</p>
             <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-5 leading-tight">
-              The right relationships reduce execution risk and protect the proforma.
+              The Right Relationships Reduce Execution Risk and Protect the Proforma.
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-5">
               In hospitality development, execution quality is inseparable from team quality. The wrong architect, consultant, or contractor—or a poorly coordinated team—can erode margins, delay approvals, and compromise the end product.
@@ -101,7 +101,7 @@ const Ecosystem = () => (
         <AnimatedSection className="mb-14">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-4">The Partner Network</p>
           <h2 className="text-2xl lg:text-3xl font-black text-foreground leading-tight">
-            Specialists across every phase of development.
+            Specialists Across Every Phase of Development.
           </h2>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,7 +134,7 @@ const Ecosystem = () => (
       <div className="container mx-auto px-6 text-center">
         <AnimatedSection>
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-            Access the ecosystem through BTN.
+            Access the Ecosystem Through BTN.
           </h2>
           <Link
             to="/contact"

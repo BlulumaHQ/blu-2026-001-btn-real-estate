@@ -78,7 +78,7 @@ const OurProcess = () => (
         <AnimatedSection className="max-w-3xl">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Our Process</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            A disciplined five-step process from assessment to execution.
+            A Disciplined Five-Step Process From Assessment to Execution.
           </h1>
           <p className="text-white/65 text-lg leading-relaxed">
             BTN's process is built around one principle: every decision must be grounded in the proforma. From the first site review to the final handover, financial discipline drives the work.
@@ -126,7 +126,7 @@ const OurProcess = () => (
       <div className="container mx-auto px-6 text-center">
         <AnimatedSection>
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-            Ready to start the process?
+            Ready to Start the Process?
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             Share your property details and BTN will outline a proforma-grounded pathway forward.

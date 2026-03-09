@@ -93,7 +93,7 @@ const WhatWeDo = () => (
         <AnimatedSection className="max-w-3xl">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">What We Do</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Integrated hospitality development services—proforma first.
+            Integrated Hospitality Development Services — Proforma First.
           </h1>
           <p className="text-white/65 text-lg max-w-2xl leading-relaxed mb-10">
             BTN supports landowners across the full lifecycle—from feasibility and hotel positioning through entitlements, permitting, brand strategy, and execution alignment—so projects are compelling, buildable, and financeable in the Lower Mainland.
@@ -122,7 +122,7 @@ const WhatWeDo = () => (
         <AnimatedSection className="max-w-3xl mb-10">
           <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-4">How We Support Owners</p>
           <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-5 leading-tight">
-            One partner across strategy, approvals, and execution.
+            One Partner Across Strategy, Approvals, and Execution.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Hospitality development is complex: value is created (or lost) at each decision point—positioning, approvals strategy, brand, design efficiency, and delivery discipline. BTN integrates these functions into a single proforma-led advisory model, helping owners de-risk decisions and maximise property value.
@@ -162,7 +162,7 @@ const WhatWeDo = () => (
                   <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">What BTN provides</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">What BTN Provides</p>
                   <ul className="space-y-3">
                     {s.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-3 text-sm text-foreground">
@@ -184,7 +184,7 @@ const WhatWeDo = () => (
       <div className="container mx-auto px-6 text-center">
         <AnimatedSection>
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-            Let's build your proforma together.
+            Let's Build Your Proforma Together.
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
             Every engagement starts with a conversation. Tell us about your land or asset and we'll show you what's possible.
