@@ -25,19 +25,17 @@ const values = [
 const About = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">About BTN</p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Hospitality Development Advisory, Built Differently.
-          </h1>
-          <p className="text-white/65 text-lg leading-relaxed">
-            BTN is a boutique hospitality real estate consultancy focused on Metro Vancouver and the Lower Mainland. We work with landowners and real estate owners to unlock hospitality-led value from underutilised sites—through a proforma-first, integrated advisory model that bridges strategy, entitlements, brand, and execution.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">About BTN</p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          Hospitality Development Advisory, Built Differently.
+        </h1>
+        <p className="text-white/65 text-lg leading-relaxed">
+          BTN is a boutique hospitality real estate consultancy focused on Metro Vancouver and the Lower Mainland. We work with landowners and real estate owners to unlock hospitality-led value from underutilised sites—through a proforma-first, integrated advisory model that bridges strategy, entitlements, brand, and execution.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Who We Are */}
     <section className="py-24 lg:py-32 bg-white">

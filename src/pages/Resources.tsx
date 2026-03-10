@@ -1,5 +1,6 @@
 import { FileText, Building2, Train, Heart } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 
 const resources = [
   {
