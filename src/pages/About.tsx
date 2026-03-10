@@ -52,6 +52,7 @@ const About = () => (
               />
             </div>
           </AnimatedSection>
+          <AnimatedSection delay={0.1}>
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Who We Are</p>
             <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight">
               A Specialised Team With Deep Hospitality and Development Expertise.
