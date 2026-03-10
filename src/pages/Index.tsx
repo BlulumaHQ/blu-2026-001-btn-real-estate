@@ -378,7 +378,7 @@ const Index = () => {
       </section>
 
       {/* ─── FINAL CTA ───────────────────────────────────────────────── */}
-      <section className="gradient-navy py-28">
+      <section id="evaluate" className="gradient-navy py-28">
         <div className="container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-6 max-w-2xl mx-auto leading-tight">
@@ -389,10 +389,11 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity text-base"
+              className="inline-flex items-center gap-2 px-10 py-5 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity text-base"
             >
-              Start a Conversation <ArrowRight size={20} />
+              Request Project Evaluation <ArrowRight size={20} />
             </Link>
+            <p className="text-white/45 text-sm mt-4 uppercase tracking-wide">Confidential Review For Developers And Investors</p>
           </AnimatedSection>
         </div>
       </section>
