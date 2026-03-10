@@ -38,24 +38,21 @@ const About = () => (
       </AnimatedSection>
     </PageTitleSection>
 
-    {/* Logo Image */}
-    <section className="py-16 lg:py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-4xl mx-auto">
-          <img
-            src={btn3dSign}
-            alt="BTN Real Estate Services 3D sign"
-            className="w-full rounded-2xl"
-          />
-        </AnimatedSection>
-      </div>
-    </section>
-
     {/* Who We Are */}
     <section className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left: 3D sign image */}
           <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={btn3dSign}
+                alt="BTN Real Estate Services 3D sign"
+                className="w-full object-cover"
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.1}>
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Who We Are</p>
             <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight">
               A Specialised Team With Deep Hospitality and Development Expertise.
@@ -72,7 +69,7 @@ const About = () => (
               </p>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection delay={0.15}>
             {/* Stat highlight */}
             <div className="bg-surface rounded-2xl border border-border p-10 mb-8">
               <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-8">By the Numbers</p>
