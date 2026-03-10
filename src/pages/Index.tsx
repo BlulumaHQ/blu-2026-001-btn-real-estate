@@ -123,19 +123,20 @@ const Index = () => {
               BTN partners with landowners and real estate owners to unlock hospitality-led value through hotel positioning, brand strategy, rezoning, Development Permit and Building Permit pathways, and disciplined execution planning.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+              <a
+                href="#evaluate"
+                className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
               >
-                Start a Conversation <ArrowRight size={18} />
-              </Link>
+                Evaluate Your Site <ArrowRight size={18} />
+              </a>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wide rounded hover:border-white/60 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] border-2 border-white/30 text-white font-bold uppercase tracking-wide rounded hover:border-white/60 transition-colors"
               >
                 View Projects
               </Link>
             </div>
+            <p className="text-white/50 text-sm mt-4 uppercase tracking-wide">Start With A Proforma Review</p>
           </AnimatedSection>
         </div>
       </section>
@@ -347,6 +348,15 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+          <AnimatedSection delay={0.3} className="text-center mt-14">
+            <p className="text-xl lg:text-2xl font-black text-foreground mb-5">Considering A Development Opportunity?</p>
+            <a
+              href="#evaluate"
+              className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+            >
+              Evaluate Your Site <ArrowRight size={18} />
+            </a>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -368,7 +378,7 @@ const Index = () => {
       </section>
 
       {/* ─── FINAL CTA ───────────────────────────────────────────────── */}
-      <section className="gradient-navy py-28">
+      <section id="evaluate" className="gradient-navy py-28">
         <div className="container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-6 max-w-2xl mx-auto leading-tight">
@@ -379,10 +389,11 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity text-base"
+              className="inline-flex items-center gap-2 px-10 py-5 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity text-base"
             >
-              Start a Conversation <ArrowRight size={20} />
+              Request Project Evaluation <ArrowRight size={20} />
             </Link>
+            <p className="text-white/45 text-sm mt-4 uppercase tracking-wide">Confidential Review For Developers And Investors</p>
           </AnimatedSection>
         </div>
       </section>
