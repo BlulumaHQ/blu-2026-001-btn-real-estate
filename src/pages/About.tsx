@@ -23,6 +23,12 @@ const values = [
   },
 ];
 
+const stats = [
+  { value: "100", accent: "+", label: "Years of combined hospitality development experience across the BTN team" },
+  { value: "Metro", accent: " YVR", label: "Primary focus—Metro Vancouver and the Lower Mainland" },
+  { value: "300", accent: "%+", label: "Demonstrated value uplift in select client engagements", disclaimer: "Outcomes vary by asset and market. Past results are illustrative, not guarantees." },
+];
+
 const About = () => (
   <>
     {/* Hero */}
@@ -38,13 +44,12 @@ const About = () => (
       </AnimatedSection>
     </PageTitleSection>
 
-    {/* Who We Are */}
+    {/* Brand Image + Intro */}
     <section className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left: 3D sign image */}
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+        <div className="grid lg:grid-cols-5 gap-14 items-center">
+          <AnimatedSection className="lg:col-span-2">
+            <div className="rounded-2xl overflow-hidden shadow-[0_8px_30px_-12px_hsl(var(--primary)/0.2)]">
               <img
                 src={btn3dSign}
                 alt="BTN Real Estate Services 3D sign"
@@ -52,7 +57,7 @@ const About = () => (
               />
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection delay={0.1} className="lg:col-span-3">
             <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Who We Are</p>
             <h2 className="text-2xl lg:text-3xl font-black text-foreground mb-6 leading-tight">
               A Specialised Team With Deep Hospitality and Development Expertise.
@@ -69,33 +74,27 @@ const About = () => (
               </p>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.15}>
-            {/* Stat highlight */}
-            <div className="bg-surface rounded-2xl border border-border p-10 mb-8">
-              <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-8">By the Numbers</p>
-              <div className="space-y-8">
-                <div>
-                  <div className="text-5xl font-black text-foreground mb-1">100<span className="text-accent">+</span></div>
-                  <div className="text-sm text-muted-foreground font-semibold">Years of combined hospitality development experience across the BTN team</div>
+        </div>
+      </div>
+    </section>
+
+    {/* Stats Strip */}
+    <section className="gradient-navy py-16 lg:py-20">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-16">
+          {stats.map((s, i) => (
+            <AnimatedSection key={i} delay={i * 0.08}>
+              <div className="text-center md:text-left">
+                <div className="text-4xl lg:text-5xl font-black text-white mb-2">
+                  {s.value}<span className="text-accent">{s.accent}</span>
                 </div>
-                <div className="border-t border-border pt-8">
-                  <div className="text-5xl font-black text-foreground mb-1">Metro <span className="text-accent">YVR</span></div>
-                  <div className="text-sm text-muted-foreground font-semibold">Primary focus—Metro Vancouver and the Lower Mainland</div>
-                </div>
-                <div className="border-t border-border pt-8">
-                  <div className="text-5xl font-black text-foreground mb-1">300<span className="text-accent">%+</span></div>
-                  <div className="text-sm text-muted-foreground font-semibold">Demonstrated value uplift in select client engagements</div>
-                  <p className="text-xs text-muted-foreground/50 mt-2 italic">Outcomes vary by asset and market. Past results are illustrative, not guarantees.</p>
-                </div>
+                <p className="text-white/60 text-sm font-medium leading-relaxed">{s.label}</p>
+                {s.disclaimer && (
+                  <p className="text-white/25 text-xs mt-2 italic">{s.disclaimer}</p>
+                )}
               </div>
-            </div>
-            <div className="bg-primary/5 rounded-xl p-6 border border-border">
-              <p className="text-sm font-bold text-foreground mb-2">Our Focus Area</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Metro Vancouver, the Lower Mainland, and select BC markets where BTN has active relationships and local expertise.
-              </p>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>
@@ -133,6 +132,18 @@ const About = () => (
             </AnimatedSection>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Focus Area */}
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6">
+        <AnimatedSection className="max-w-2xl mx-auto text-center">
+          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-4">Our Focus Area</p>
+          <p className="text-muted-foreground leading-relaxed">
+            Metro Vancouver, the Lower Mainland, and select BC markets where BTN has active relationships and local expertise.
+          </p>
+        </AnimatedSection>
       </div>
     </section>
 
