@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 import project01Img from "@/assets/project-06.webp";
 import project02Img from "@/assets/project-urban-mixed-use.webp";
 import project03Img from "@/assets/project-04.webp";
