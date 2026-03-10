@@ -65,8 +65,8 @@ const brandSupport = [
 ];
 
 const heroSlides = [
-  { src: heroSlide01, alt: "BTN hospitality development Vancouver" },
-  { src: heroSlide02, alt: "Urban mixed-use hotel development" },
+  { src: heroSlide01, alt: "BTN hospitality development Vancouver", position: "center center" },
+  { src: heroSlide02, alt: "Urban mixed-use hotel development", position: "center 30%" },
 ];
 
 /* Fisher-Yates shuffle */
@@ -103,6 +103,7 @@ const Index = () => {
             src={heroSlides[slideIndex].src}
             alt={heroSlides[slideIndex].alt}
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: heroSlides[slideIndex].position }}
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}

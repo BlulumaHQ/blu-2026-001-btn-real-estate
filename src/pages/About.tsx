@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import PageTitleSection from "@/components/PageTitleSection";
+import btn3dSign from "@/assets/btn-3d-sign.webp";
 
 const values = [
   {
@@ -36,6 +37,19 @@ const About = () => (
         </p>
       </AnimatedSection>
     </PageTitleSection>
+
+    {/* Logo Image */}
+    <section className="py-16 lg:py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <AnimatedSection className="max-w-4xl mx-auto">
+          <img
+            src={btn3dSign}
+            alt="BTN Real Estate Services 3D sign"
+            className="w-full rounded-2xl"
+          />
+        </AnimatedSection>
+      </div>
+    </section>
 
     {/* Who We Are */}
     <section className="py-24 lg:py-32 bg-white">
