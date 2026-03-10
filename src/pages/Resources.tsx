@@ -1,5 +1,6 @@
 import { FileText, Building2, Train, Heart } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 
 const resources = [
   {
@@ -35,21 +36,19 @@ const resources = [
 const Resources = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">
-            Resources
-          </p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Development Resources
-          </h1>
-          <p className="text-white/65 text-lg leading-relaxed">
-            Key policy documents and urban planning guidelines for Vancouver.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">
+          Resources
+        </p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          Development Resources
+        </h1>
+        <p className="text-white/65 text-lg leading-relaxed">
+          Key policy documents and urban planning guidelines for Vancouver.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Cards Grid */}
     <section className="py-24 lg:py-32 bg-white">

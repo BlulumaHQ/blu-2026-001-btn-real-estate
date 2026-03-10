@@ -1,6 +1,7 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { Phone, MapPin, Globe, Mail, Upload } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 import { useToast } from "@/hooks/use-toast";
 
 type Stage = "Exploring" | "In approvals" | "In delivery" | "";
@@ -78,19 +79,17 @@ const Contact = () => {
   return (
     <>
       {/* Hero */}
-      <section className="gradient-navy pt-36 pb-24">
-        <div className="container mx-auto px-6">
-          <AnimatedSection className="max-w-3xl">
-            <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Contact</p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-              Get in Touch to Discuss Your Land Asset.
-            </h1>
-            <p className="text-white/65 text-lg max-w-2xl leading-relaxed">
-              Share your property details and objectives. BTN will outline a proforma-grounded pathway to unlock value, align brand strategy, and execute with the right team.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+      <PageTitleSection>
+        <AnimatedSection className="max-w-3xl">
+          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Contact</p>
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+            Get in Touch to Discuss Your Land Asset.
+          </h1>
+          <p className="text-white/65 text-lg max-w-2xl leading-relaxed">
+            Share your property details and objectives. BTN will outline a proforma-grounded pathway to unlock value, align brand strategy, and execute with the right team.
+          </p>
+        </AnimatedSection>
+      </PageTitleSection>
 
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">

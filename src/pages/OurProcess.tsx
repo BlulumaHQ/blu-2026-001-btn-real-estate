@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 
 const steps = [
   {
@@ -73,19 +74,17 @@ const steps = [
 const OurProcess = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Our Process</p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            A Disciplined Five-Step Process From Assessment to Execution.
-          </h1>
-          <p className="text-white/65 text-lg leading-relaxed">
-            BTN's process is built around one principle: every decision must be grounded in the proforma. From the first site review to the final handover, financial discipline drives the work.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Our Process</p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          A Disciplined Five-Step Process From Assessment to Execution.
+        </h1>
+        <p className="text-white/65 text-lg leading-relaxed">
+          BTN's process is built around one principle: every decision must be grounded in the proforma. From the first site review to the final handover, financial discipline drives the work.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Steps */}
     <section className="py-24 lg:py-32 bg-white">

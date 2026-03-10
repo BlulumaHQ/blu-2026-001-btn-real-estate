@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Award, FileCheck, PencilRuler, HardHat } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 
 const services = [
   {
@@ -45,19 +46,17 @@ const phases = [
 const Services = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-32 pb-20">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Capabilities</p>
-          <h1 className="text-4xl lg:text-5xl font-black text-primary-foreground leading-tight mb-6">
-            End-to-End Hospitality Development Services
-          </h1>
-          <p className="text-primary-foreground/70 text-lg max-w-2xl leading-relaxed">
-            From initial feasibility through to delivery, BTN provides integrated services that protect your capital and maximise asset value at every stage.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection className="pt-32 pb-20">
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-sm uppercase tracking-[0.2em] mb-4">Our Capabilities</p>
+        <h1 className="text-4xl lg:text-5xl font-black text-primary-foreground leading-tight mb-6">
+          End-to-End Hospitality Development Services
+        </h1>
+        <p className="text-primary-foreground/70 text-lg max-w-2xl leading-relaxed">
+          From initial feasibility through to delivery, BTN provides integrated services that protect your capital and maximise asset value at every stage.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Services grid */}
     <section className="py-24 lg:py-32">

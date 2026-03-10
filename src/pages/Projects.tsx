@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 import project01Img from "@/assets/project-06.webp";
 import project02Img from "@/assets/project-urban-mixed-use.webp";
 import project03Img from "@/assets/project-04.webp";
@@ -82,19 +83,17 @@ const projects = [
 const Projects = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Projects</p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Demonstrated Outcomes Across Hospitality Development.
-          </h1>
-          <p className="text-white/65 text-lg leading-relaxed">
-            BTN's track record spans repositioning, entitlements, brand strategy, and execution planning across Metro Vancouver and British Columbia.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Projects</p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          Demonstrated Outcomes Across Hospitality Development.
+        </h1>
+        <p className="text-white/65 text-lg leading-relaxed">
+          BTN's track record spans repositioning, entitlements, brand strategy, and execution planning across Metro Vancouver and British Columbia.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Projects */}
     <section className="py-24 lg:py-32 bg-white">
