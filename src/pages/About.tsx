@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import PageTitleSection from "@/components/PageTitleSection";
+import btn3dSign from "@/assets/btn-3d-sign.webp";
 
 const values = [
   {
