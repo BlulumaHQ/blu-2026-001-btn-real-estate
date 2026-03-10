@@ -34,13 +34,6 @@ const Footer = () => (
           <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
             Proforma-driven hotel development advisory for Metro Vancouver and the Lower Mainland.
           </p>
-          <a
-            href="mailto:info@BTNpro.ca"
-            className="inline-flex items-center gap-2 mt-4 text-sm text-accent hover:text-accent/80 transition-colors"
-          >
-            <Mail size={14} />
-            info@BTNpro.ca
-          </a>
         </div>
 
         {/* Col 2 – Spacer (hidden on mobile) */}
@@ -85,15 +78,14 @@ const Footer = () => (
             <a href="tel:7786886089" className="hover:text-primary-foreground transition-colors">
               (778) 688-6089
             </a>
-            <span>73 East 6th Avenue<br />Vancouver, BC V5T 1J3</span>
             <a
-              href="https://www.BTNpro.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary-foreground transition-colors"
+              href="mailto:info@BTNpro.ca"
+              className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors"
             >
-              www.BTNpro.ca
+              <Mail size={14} />
+              info@BTNpro.ca
             </a>
+            <span>73 East 6th Avenue<br />Vancouver, BC V5T 1J3</span>
           </div>
         </div>
       </div>
@@ -109,13 +101,13 @@ const Footer = () => (
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/35">
         <span>
           BTN Copyright © 2026 All Rights Reserved.
-          <span className="text-[#d8d8d8]/40 hover:text-[#9a9a9a] transition-colors">
+          <span className="text-[#d8d8d8]/20 hover:text-[#d8d8d8]/40 transition-colors">
             {" "}| Web Design by{" "}
             <a
               href="https://www.bluluma.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#9a9a9a] transition-colors"
+              className="hover:text-[#d8d8d8]/40 transition-colors"
             >
               Bluluma
             </a>
