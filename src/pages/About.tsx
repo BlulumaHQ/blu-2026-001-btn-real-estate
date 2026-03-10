@@ -69,7 +69,7 @@ const About = () => (
               </p>
             </div>
           </AnimatedSection>
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection delay={0.15}>
             {/* Stat highlight */}
             <div className="bg-surface rounded-2xl border border-border p-10 mb-8">
               <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-8">By the Numbers</p>
