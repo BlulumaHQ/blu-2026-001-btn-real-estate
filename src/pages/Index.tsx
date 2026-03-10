@@ -103,6 +103,7 @@ const Index = () => {
             src={heroSlides[slideIndex].src}
             alt={heroSlides[slideIndex].alt}
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: heroSlides[slideIndex].position }}
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
