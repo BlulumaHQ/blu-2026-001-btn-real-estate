@@ -348,6 +348,15 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+          <AnimatedSection delay={0.3} className="text-center mt-14">
+            <p className="text-xl lg:text-2xl font-black text-foreground mb-5">Considering A Development Opportunity?</p>
+            <a
+              href="#evaluate"
+              className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+            >
+              Evaluate Your Site <ArrowRight size={18} />
+            </a>
+          </AnimatedSection>
         </div>
       </section>
 
