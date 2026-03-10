@@ -123,19 +123,20 @@ const Index = () => {
               BTN partners with landowners and real estate owners to unlock hospitality-led value through hotel positioning, brand strategy, rezoning, Development Permit and Building Permit pathways, and disciplined execution planning.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+              <a
+                href="#evaluate"
+                className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
               >
-                Start a Conversation <ArrowRight size={18} />
-              </Link>
+                Evaluate Your Site <ArrowRight size={18} />
+              </a>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wide rounded hover:border-white/60 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] border-2 border-white/30 text-white font-bold uppercase tracking-wide rounded hover:border-white/60 transition-colors"
               >
                 View Projects
               </Link>
             </div>
+            <p className="text-white/50 text-sm mt-4 uppercase tracking-wide">Start With A Proforma Review</p>
           </AnimatedSection>
         </div>
       </section>
