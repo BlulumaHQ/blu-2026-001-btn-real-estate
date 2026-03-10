@@ -66,7 +66,7 @@ const brandSupport = [
 
 const heroSlides = [
   { src: heroSlide01, alt: "BTN hospitality development Vancouver", position: "center center" },
-  { src: heroSlide02, alt: "Urban mixed-use hotel development", position: "center 30%" },
+  { src: heroSlide02, alt: "Urban mixed-use hotel development", position: "center 20%" },
 ];
 
 /* Fisher-Yates shuffle */
