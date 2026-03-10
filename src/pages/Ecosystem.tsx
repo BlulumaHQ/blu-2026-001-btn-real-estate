@@ -36,19 +36,17 @@ const brandLogos = ["Hilton", "Marriott", "Hyatt", "Choice Hotels"];
 const Ecosystem = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Ecosystem</p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            A Network Built for Hospitality Development in Metro Vancouver.
-          </h1>
-          <p className="text-white/65 text-lg leading-relaxed">
-            BTN's value extends beyond direct advisory services. Through a carefully developed ecosystem of local partners—architects, consultants, contractors, municipal advisors, and brand relationships—BTN helps owners assemble and coordinate the right team for each project.
-          </p>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">Ecosystem</p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          A Network Built for Hospitality Development in Metro Vancouver.
+        </h1>
+        <p className="text-white/65 text-lg leading-relaxed">
+          BTN's value extends beyond direct advisory services. Through a carefully developed ecosystem of local partners—architects, consultants, contractors, municipal advisors, and brand relationships—BTN helps owners assemble and coordinate the right team for each project.
+        </p>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* Why it matters */}
     <section className="py-20 bg-surface border-b border-border">

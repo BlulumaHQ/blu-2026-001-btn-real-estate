@@ -89,33 +89,31 @@ const pathway = [
 const WhatWeDo = () => (
   <>
     {/* Hero */}
-    <section className="gradient-navy pt-36 pb-24">
-      <div className="container mx-auto px-6">
-        <AnimatedSection className="max-w-3xl">
-          <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">What We Do</p>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
-            Integrated Hospitality Development Services — Proforma First.
-          </h1>
-          <p className="text-white/65 text-lg max-w-2xl leading-relaxed mb-10">
-            BTN supports landowners across the full lifecycle—from feasibility and hotel positioning through entitlements, permitting, brand strategy, and execution alignment—so projects are compelling, buildable, and financeable in the Lower Mainland.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
-            >
-              Start a Conversation <ArrowRight size={18} />
-            </Link>
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/25 text-white font-bold uppercase tracking-wide rounded hover:border-white/50 transition-colors"
-            >
-              View Projects
-            </Link>
-          </div>
-        </AnimatedSection>
-      </div>
-    </section>
+    <PageTitleSection>
+      <AnimatedSection className="max-w-3xl">
+        <p className="text-accent font-bold text-xs uppercase tracking-[0.25em] mb-5">What We Do</p>
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-7">
+          Integrated Hospitality Development Services — Proforma First.
+        </h1>
+        <p className="text-white/65 text-lg max-w-2xl leading-relaxed mb-10">
+          BTN supports landowners across the full lifecycle—from feasibility and hotel positioning through entitlements, permitting, brand strategy, and execution alignment—so projects are compelling, buildable, and financeable in the Lower Mainland.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded hover:opacity-90 transition-opacity"
+          >
+            Start a Conversation <ArrowRight size={18} />
+          </Link>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/25 text-white font-bold uppercase tracking-wide rounded hover:border-white/50 transition-colors"
+          >
+            View Projects
+          </Link>
+        </div>
+      </AnimatedSection>
+    </PageTitleSection>
 
     {/* How We Support Owners */}
     <section className="py-20 bg-surface border-b border-border">
