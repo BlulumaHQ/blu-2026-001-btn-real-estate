@@ -1,6 +1,7 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { Phone, MapPin, Globe, Mail, Upload } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PageTitleSection from "@/components/PageTitleSection";
 import { useToast } from "@/hooks/use-toast";
 
 type Stage = "Exploring" | "In approvals" | "In delivery" | "";
