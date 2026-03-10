@@ -107,7 +107,20 @@ const Footer = () => (
 
       {/* Bottom bar */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-foreground/35">
-        <span>BTN Copyright © 2026 All Rights Reserved.</span>
+        <span>
+          BTN Copyright © 2026 All Rights Reserved.
+          <span className="text-[#d8d8d8]/40 hover:text-[#9a9a9a] transition-colors">
+            {" "}| Web Design by{" "}
+            <a
+              href="https://www.bluluma.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#9a9a9a] transition-colors"
+            >
+              Bluluma
+            </a>
+          </span>
+        </span>
         <div className="flex gap-6">
           {legalLinks.map((l) => (
             <Link
