@@ -4,6 +4,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import PageTitleSection from "@/components/PageTitleSection";
 import { useToast } from "@/hooks/use-toast";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjgagjoe";
+
 type Stage = "Exploring" | "In approvals" | "In delivery" | "";
 type Objective = "Value uplift" | "Brand strategy" | "Entitlements" | "Fastest path to revenue";
 
@@ -28,6 +30,7 @@ const labelClass = "block text-xs font-bold uppercase tracking-wide text-foregro
 
 const Contact = () => {
   const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState<FormState>({
     name: "",
     company: "",
@@ -57,23 +60,63 @@ const Contact = () => {
     set("file", file);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message received",
-      description: "We typically respond within one business day.",
-    });
-    setForm({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      propertyAddress: "",
-      stage: "",
-      objectives: [],
-      message: "",
-      file: null,
-    });
+    if (submitting) return;
+
+    const formEl = e.currentTarget;
+    const honeypot = (formEl.elements.namedItem("_gotcha") as HTMLInputElement)?.value;
+    if (honeypot) return; // bot trap
+
+    setSubmitting(true);
+
+    const data = new FormData();
+    data.append("Full Name", form.name);
+    data.append("Email", form.email);
+    data.append("Phone Number", form.phone);
+    data.append("Company", form.company);
+    data.append("Property Address", form.propertyAddress);
+    data.append("Development Stage", form.stage);
+    data.append("Objectives", form.objectives.join(", "));
+    data.append("Message", form.message);
+    data.append("_subject", "New Inquiry from BTN Website");
+    data.append("_replyto", form.email);
+    if (form.file) data.append("attachment", form.file);
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (!res.ok) throw new Error("Submission failed");
+
+      toast({
+        title: "Thank you",
+        description: "Your message has been received. We will get back to you shortly.",
+      });
+      setForm({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        propertyAddress: "",
+        stage: "",
+        objectives: [],
+        message: "",
+        file: null,
+      });
+      formEl.reset();
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -177,6 +220,18 @@ const Contact = () => {
             <AnimatedSection delay={0.1}>
               <form onSubmit={handleSubmit} className="bg-surface rounded-2xl p-8 lg:p-10 border border-border space-y-6">
                 <h2 className="text-lg font-black text-foreground mb-2">Start a Conversation</h2>
+
+                {/* Honeypot - hidden from users */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  style={{ display: "none" }}
+                  aria-hidden="true"
+                />
+                <input type="hidden" name="_subject" value="New Inquiry from BTN Website" />
+                <input type="hidden" name="_replyto" value={form.email} />
 
                 {/* Name + Company */}
                 <div className="grid sm:grid-cols-2 gap-5">
@@ -316,9 +371,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded-lg hover:opacity-90 transition-opacity text-sm"
+                  disabled={submitting}
+                  className="w-full py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide rounded-lg hover:opacity-90 transition-opacity text-sm disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </AnimatedSection>
